@@ -1,0 +1,6 @@
+<h1>Lista de personajes</h1>
+<div>
+    @for(character of characters; track character.id){
+        <app-character [character]="character"></app-character>
+    }
+</div>
