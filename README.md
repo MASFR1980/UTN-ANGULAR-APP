@@ -22,7 +22,7 @@ Esta es una aplicación desarrollada en Angular que permite explorar los persona
 
 2. **Navegar al directorio del proyecto:**
    ```bash
-   cd https://github.com/MASFR1980/UTN-ANGULAR-APP.git
+   cd UTN-ANGULAR-APP
    ```
 
 3. **Instalar las dependencias:**
