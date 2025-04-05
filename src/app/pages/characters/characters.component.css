@@ -1,0 +1,25 @@
+.characters-container {
+    padding: 2rem;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    min-height: 100vh;
+  }
+  
+  .characters-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #39ff14;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 5px #000;
+  }
+  
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+    padding: 0 1rem;
+  }
+  
+  

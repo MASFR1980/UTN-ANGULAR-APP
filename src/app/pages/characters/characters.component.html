@@ -1,6 +1,9 @@
-<h1>Lista de personajes</h1>
-<div>
+<section class="characters-container">
+  <h1 class="characters-title">🧬 Lista de personajes</h1>
+
+  <div class="cards-grid">
     @for(character of characters; track character.id){
-        <app-character [character]="character"></app-character>
+      <app-character [character]="character"></app-character>
     }
-</div>
+  </div>
+</section>

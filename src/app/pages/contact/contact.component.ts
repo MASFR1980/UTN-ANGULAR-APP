@@ -11,7 +11,7 @@ export class ContactComponent {
   contactForm: FormGroup;
   constructor(private formBuilder: FormBuilder) {
     this.contactForm = this.formBuilder.group({
-      name: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(50)]],
+      name: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(50)]],
       email: ['', [
         Validators.required,
         Validators.email,
@@ -24,18 +24,21 @@ export class ContactComponent {
   }
   onSubmit() {
     if (this.contactForm.valid) {
-      console.log('Form Submitted!', this.contactForm.value);
-      alert('Form Submitted!');
+      console.log('¡Formulario enviado!', this.contactForm.value);
+      alert('¡Formulario enviado!');
       this.contactForm.reset();  // Limpia el formulario después de enviarlo
     } else {
+      const invalidFields: string[] = [];
       Object.keys(this.contactForm.controls).forEach(field => {
         const control = this.contactForm.get(field);
         if (control?.invalid) {
-          console.error(`${field} is invalid`);
+          invalidFields.push(field);
           control.markAsTouched();  // Marca los campos como "tocados" para mostrar errores en la UI
         }
       });
+      alert(`Formulario inválido. Por favor, revisa los siguientes campos: ${invalidFields.join(', ')}`);
     }
   }
 
 }
+  

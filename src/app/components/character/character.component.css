@@ -1,0 +1,38 @@
+.character-card {
+    width: 100%;
+    max-width: 300px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid #39ff14;
+    border-radius: 20px;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 0 20px #39ff14;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .character-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #39ff14;
+  }
+  
+  .character-img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #00ffaa;
+    box-shadow: 0 0 10px #00ffaa;
+    margin-bottom: 1rem;
+  }
+  
+  .character-info h2 {
+    font-size: 1.2rem;
+    color: #39ff14;
+    margin-bottom: 0.5rem;
+  }
+  
+  .character-info p {
+    font-size: 1rem;
+    color: #00ffaa;
+  }

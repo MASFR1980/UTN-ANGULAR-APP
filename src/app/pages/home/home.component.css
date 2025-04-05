@@ -1,0 +1,101 @@
+/* Contenedor principal */
+.home-container {
+    position: relative;
+    background-color: #0f0f0f;
+    color: #ffffff;
+    padding: 4rem 2rem;
+    min-height: calc(80vh - 100px); /* Ajusta según el alto de tu header */
+    font-family: 'Orbitron', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  /* Fondo tipo portal giratorio */
+  .portal-bg {
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, #39ff14 0%, #001a00 70%);
+    opacity: 0.1;
+    animation: spin 60s linear infinite;
+    z-index: 0;
+    border-radius: 50%;
+  }
+  
+  /* Animación de giro */
+  @keyframes spin {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+  }
+  
+  /* Caja del contenido */
+  .content {
+    position: relative;
+    max-width: 800px;
+    text-align: center;
+    z-index: 1;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 2px solid #39ff14;
+    border-radius: 16px;
+    box-shadow: 0 0 20px #39ff14;
+  }
+  
+  /* Título principal */
+  .home-title {
+    font-size: 2.5rem;
+    color: #39ff14;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 5px #000;
+  }
+  
+  /* Texto descriptivo */
+  .home-description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Cita Rick & Morty */
+  .quote {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #00ffaa;
+  }
+
+  .rocket-img {
+    position: absolute;
+    width: 80px;
+    top: 80%;
+    left: -150px;
+    z-index: 2;
+    animation: fly-across 12s linear infinite;
+    opacity: 0.9;
+    
+  }
+
+  @keyframes fly-across {
+    0% {
+      transform: translateX(0) rotate(50deg);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    50% {
+      transform: translateX(100vw) rotate(90deg);
+      opacity: 1;
+    }
+    90% {
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(100vw) rotate(180deg);
+      opacity: 0;
+    }
+  }
+  

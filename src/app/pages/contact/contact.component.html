@@ -1,9 +1,17 @@
-<form [formGroup]="contactForm" (ngSubmit)="onSubmit()"> 
-    <label for="name">Nombre:</label>
-    <input type="text" formControlName="name" id="name">
-    <label for="email">Correo Electrónico:</label>
-    <input type="email" formControlName="email" id="email">
-    <label for="message">Mensaje:</label>
-    <input type="text" formControlName="message" id="message">
-    <button>Enviar</button>
-</form>
+<section class="contact-container">
+    <h1 class="contact-title">📡 ¡Contactanos desde cualquier dimensión!</h1>
+  
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+      <label for="name">Nombre:</label>
+      <input type="text" formControlName="name" id="name" />
+  
+      <label for="email">Correo Electrónico:</label>
+      <input type="email" formControlName="email" id="email" />
+  
+      <label for="message">Mensaje:</label>
+      <textarea formControlName="message" id="message" rows="4"></textarea>
+  
+      <button type="submit">🚀 Enviar</button>
+    </form>
+  </section>
+  
