@@ -1,59 +1,86 @@
-# UTNANGULARAPP
+# Aplicación de Rick and Morty en Angular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.5.
+Esta es una aplicación desarrollada en Angular que permite explorar los personajes de la serie "Rick and Morty" y conocer sus características. La aplicación ofrece una navegación sencilla y una funcionalidad básica de inicio de sesión simulada.
 
-## Development server
+## Características
 
-To start a local development server, run:
+- **Navegación Principal:**
+  - **Home:** Página de inicio de la aplicación.
+  - **Character:** Sección donde se listan y detallan los personajes de "Rick and Morty".
+  - **Contact:** Página de contacto.
+  - **Autenticación Simulada:** Opción para iniciar sesión mediante un botón, sin verificación de credenciales.
 
-```bash
-ng serve
+- **Integración con la API de Rick and Morty:**
+  - La aplicación consume datos de la [API de Rick and Morty](https://rickandmortyapi.com/), que proporciona información detallada sobre los personajes, ubicaciones y episodios de la serie.
+
+## Instalación
+
+1. **Clonar el repositorio:**
+   ```bash
+   git clone https://github.com/MASFR1980/UTN-ANGULAR-APP.git
+   ```
+
+2. **Navegar al directorio del proyecto:**
+   ```bash
+   cd https://github.com/MASFR1980/UTN-ANGULAR-APP.git
+   ```
+
+3. **Instalar las dependencias:**
+   ```bash
+   npm install
+   ```
+
+## Uso
+
+1. **Iniciar el servidor de desarrollo:**
+   ```bash
+   ng serve
+   ```
+
+2. **Abrir la aplicación en el navegador:**
+   Visita `http://localhost:4200/` para ver la aplicación en funcionamiento.
+
+## Dependencias
+
+- **Angular:** Framework principal utilizado para el desarrollo de la aplicación.
+- **Angular Router:** Utilizado para gestionar la navegación entre componentes.
+- **HTTP Client Module:** Para realizar peticiones HTTP a la API de Rick and Morty.
+
+## Estructura del Proyecto
+
+```markdown
+tu_repositorio/
+├── src/
+│   ├── app/
+│   │   ├── components/
+│   │   │   ├── home/
+│   │   │   │   ├── home.component.ts
+│   │   │   │   ├── home.component.html
+│   │   │   │   └── home.component.css
+│   │   │   ├── character/
+│   │   │   │   ├── character.component.ts
+│   │   │   │   ├── character.component.html
+│   │   │   │   └── character.component.css
+│   │   │   ├── contact/
+│   │   │   │   ├── contact.component.ts
+│   │   │   │   ├── contact.component.html
+│   │   │   │   └── contact.component.css
+│   │   ├── services/
+│   │   │   └── api.service.ts
+│   │   ├── app.component.ts
+│   │   └── app.module.ts
+│   └── index.html
+├── angular.json
+├── package.json
+└── README.md
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Notas
 
-## Code scaffolding
+- **Autenticación:** Actualmente, la funcionalidad de inicio de sesión es una maqueta. Al presionar el botón de "Login", el estado de autenticación cambia sin requerir credenciales.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
 
-```bash
-ng generate component component-name
+## Contacto
+
+Para más información o consultas, puedes contactar al desarrollador en [sinellimauricio@gmail.com](mailto:sinellimauricio@gmail.com).
 ```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
